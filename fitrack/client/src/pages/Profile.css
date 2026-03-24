@@ -1,0 +1,123 @@
+.profile-container {
+  max-width: 2000px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 24px;
+  background-image: url('./Healthy-living.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.profile-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.profile-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.profile-form {
+  display: grid;
+  gap: 12px;
+}
+
+.form-input {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 0.95rem;
+  width: 100%;
+  color: black;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: black;
+}
+
+.btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  color: black;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: white;
+  margin-left: 100px;
+  max-width: 70px;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+}
+
+.btn-secondary {
+  background: #e5e7eb;
+}
+
+.btn-secondary:hover {
+  background: #d1d5db;
+}
+
+.btn-danger {
+  background: #dc2626;
+  color: white;
+}
+
+.btn-danger:hover {
+  background: #b91c1c;
+}
+
+.profile-picture {
+  margin: 16px 0;
+  text-align: left;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  margin-bottom: 8px;
+}
+
+
+/* File input (choose file) */
+.profile-picture input[type="file"] {
+  display: inline-block;
+  margin: 0; /* align left with image */
+  width: 100px;
+}
+
+.profile-picture p {
+  color: black;
+  font-weight: bold; /* optional, to make it stand out */
+  margin: 0;
+}
+

@@ -1,0 +1,81 @@
+/* DietForm.css */
+/* Center the diet form container */
+.diet-form-container {
+  max-width: 2000px;
+  margin: 40px auto;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Form title */
+.diet-form-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  text-align: center;
+  color: #333;
+  width: 100%; /* Makes the field take the full width */
+  max-width: 800px;
+  margin-top: 20px;
+}
+
+/* Form structure */
+.diet-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Input fields */
+.diet-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background: white;
+  color: black;
+  width: 100%; /* Makes the field take the full width */
+  max-width: 200px;
+  margin-top: 20px;
+  margin-left: 300px;
+}
+
+/* Focused input fields */
+.diet-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+  outline: none;
+}
+
+/* Buttons */
+.diet-btn {
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  width: 100%; /* Makes the field take the full width */
+  max-width: 200px;
+  margin-top: 20px;
+  margin-left: 300px;
+}
+
+/* Button hover effect */
+.diet-btn:hover {
+  background: #0056b3;
+}
+
+/* Target only date inputs */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
+  cursor: pointer;
+}
+

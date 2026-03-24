@@ -1,0 +1,186 @@
+/* General setup */
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #fff7f0; /* light orange background */
+  overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+/* App container fills screen and allows vertical scrolling */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto; /* allow vertical scrolling */
+}
+
+/* Navbar */
+.navbar {
+  flex: 0 0 60px;
+  background: linear-gradient(90deg, #ff7a00, #ffa94d); /* orange gradient */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.navbar .logo {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+  color: #fff1e0; /* light yellow on hover */
+}
+
+/* Main content area */
+.main-content {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* start from top */
+  padding: 1rem;
+  overflow-y: auto; /* allow vertical scroll inside content area */
+  height: calc(100vh - 60px); /* ensure content area takes the rest of the screen after navbar */
+}
+
+/* Card wrapper for each page */
+.page-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  max-height: 95vh; /* fit inside screen */
+  box-sizing: border-box;
+  overflow-y: auto; /* allow vertical scroll inside card */
+}
+
+/* Headings */
+.page-card h1, .page-card h2 {
+  margin: 0 0 1rem 0;
+  color: #ff7a00; /* orange headings */
+}
+
+/* Buttons inside pages */
+.page-card button {
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.page-card button:hover {
+  opacity: 0.9;
+}
+
+/* Tables (WorkoutList & DietList) */
+.page-card table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.page-card table th,
+.page-card table td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.page-card table th {
+  background-color: #ffb347; /* orange header */
+  color: white;
+}
+
+.page-card table tr:nth-child(even) {
+  background-color: #fff2e6; /* light orange rows */
+}
+
+/* Form inputs */
+.page-card input,
+.page-card select,
+.page-card textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 0.5rem;
+  box-sizing: border-box;
+}
+
+.page-card input:focus,
+.page-card select:focus,
+.page-card textarea:focus {
+  outline: none;
+  border-color: #ff7a00; /* orange focus */
+  box-shadow: 0 0 5px rgba(255, 122, 0, 0.4);
+}
+
+/* Links styled as buttons */
+.page-card a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+/* Specific button colors */
+.page-card .btn-edit {
+  background-color: #ff7a00; /* orange */
+}
+
+.page-card .btn-delete {
+  background-color: #ff3d00; /* red */
+}
+
+.page-card .btn-add {
+  background-color: #ffa94d; /* lighter orange */
+}
+
+/* Scrollbar styling (optional) */
+.page-card::-webkit-scrollbar {
+  width: 8px;
+}
+
+.page-card::-webkit-scrollbar-thumb {
+  background: #ffb347;
+  border-radius: 4px;
+}
+
+.page-card::-webkit-scrollbar-track {
+  background: #ffe7cc;
+}
+
+/* Fade-in animation for content */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.page-card > * {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+
+
